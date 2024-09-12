@@ -5,31 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro | SENA</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    clifford: '#da373d',
-                }
-            }
-        }
-    }
-</script>
-<style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-    }
-  </style>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+    </style>
+
 </head>
 
 <body>
-    <h1>hola mundo</h1>
+    <section>
+
+        <main>
+            <div class="title">
+                <h2>Autenticación de Usuario</h2>
+            </div>
+            <form id="registerForm">
+                <div>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="escribe tu nombre aquí">
+                    <div class="error" id="errorName"></div>
+                </div>
+                <div>
+                    <label for="lastName">Apellido</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="escribe tu apellido aquí">
+                    <div class="error" id="errorLastName"></div>
+
+                </div>
+                <div>
+                    <label for="ID">Cedula</label>
+                    <input type="number" name="ID" id="ID" placeholder="escribe tu número de cedula aquí">
+                    <div class="error" id="errorID"></div>
+
+                </div>
+                <div>
+                    <label for="date">Fecha de Nacimiento</label>
+                    <input type="date" id="date">
+                    <div class="error" id="errorDate"></div>
+
+                </div>
+                <div class="button">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </main>
+    </section>
+    <footer>Creado por <a href="https://github.com/1Tai7">Ilce Garcia</a></footer>
 </body>
 <script src="./index.js"></script>
+
 
 </html>
